@@ -1,0 +1,11 @@
+class DailyCard {
+  final String title;
+  final String shortInfo;
+  final String detailInfo;
+
+  DailyCard({
+    required this.title,
+    required this.shortInfo,
+    required this.detailInfo,
+  });
+}

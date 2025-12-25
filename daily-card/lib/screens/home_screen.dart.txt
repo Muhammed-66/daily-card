@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+import '../services/fake_card_service.dart';
+
+class HomeScreen extends StatelessWidget {
+  HomeScreen({super.key});
+
+  final card = FakeCardService.getTodayCard();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Daily Card')),
+      body: Center(
+        child: Card(
+          elevation: 4,
+          margin: const EdgeInsets.all(16),
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(card.title,
+                    style: const TextStyle(
+                        fontSize: 22, fontWeight: FontWeight.bold)),
+                const SizedBox(height: 12),
+                Text(card.shortInfo),
+                const Divider(height: 30),
+                Text(card.detailInfo,
+                    style: const TextStyle(color: Colors.grey)),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

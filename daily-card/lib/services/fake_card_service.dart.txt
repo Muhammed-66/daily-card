@@ -1,0 +1,13 @@
+import '../models/card_model.dart';
+
+class FakeCardService {
+  static DailyCard getTodayCard() {
+    return DailyCard(
+      title: 'Bilim',
+      shortInfo: 'Işık, saniyede 300.000 km hızla yayılır.',
+      detailInfo:
+          'Işık hızı vakumda yaklaşık 299.792 km/s olarak ölçülmüştür. '
+          'Bu hız, evrendeki bilinen en yüksek hızdır.',
+    );
+  }
+}

@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
+
+void main() {
+  runApp(const DailyCardApp());
+}
+
+class DailyCardApp extends StatelessWidget {
+  const DailyCardApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Daily Card',
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
+    );
+  }
+}
